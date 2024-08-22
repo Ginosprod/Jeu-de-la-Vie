@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./mainopti.js" defer></script>
+    <title>Jeu de la Vie</title>
+</head>
+<body>
+    <div id="top">
+    <h1 id="title">LE JEU DE LA VIE</h1>
+    </div>
+    <div id="menu">
+        <p><button class="buttonmenu" id="solo">Créer</button></p>
+        <p><button class="buttonmenu" id="rules">Règles</button></p>
+    </div>
+    <div id="bottom"><p>
+        <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie" class="link">Wiki</a>
+        <a href="https://github.com/Ginosprod" class="link">Github</a>
+    </p></div>
+    <div id="rulesTab" class="hide">
+        <button id="exitRules"><img src="./images/exit.svg" height="25" width="25"/></button>
+        <p>Le jeu de la vie est un automate cellulaire imaginé par John Horton Conway en 1970. Il s'agit d'un jeu à zéro joueur, ce qui signifie que son évolution est déterminée par son état initial et ne nécessite aucune intervention de la part d'un humain. On interagit avec le jeu en créant un motif initial, puis en observant son évolution.</p>
+        <h3>Les règles</h3>
+        <p>Le jeu de la vie se déroule sur une grille à deux dimensions, théoriquement infinie (mais de taille finie ou bouclée dans la pratique), dont les cases — qu’on appelle des « cellules », par analogie avec les cellules vivantes — peuvent prendre deux états distincts : morte ou vivante. Chaque cellule interagit avec ses huit voisines, qui sont les cellules directement adjacentes horizontalement, verticalement ou en diagonale.</p>
+        <p>À chaque étape, les règles suivantes s’appliquent :</p>
+        Une cellule morte possédant exactement trois voisines vivantes devient vivante (elle naît). <br>
+        Une cellule vivante possédant deux ou trois voisines vivantes le reste, sinon elle meurt.
+        <h3>Limitations</h3>
+        <p>Ce projet est une reproduction imparfaite du Jeu de la Vie original (grille finie, affichage lent, etc.). Malgré ses limitations, il propose quelques outils intéressants qui permettent de s'amuser et d'expérimenter avec le Jeu de la Vie.</p>
+        <h3>En savoir plus</h3>
+        <p>Si vous souhaitez en savoir plus sur le Jeu de la Vie, voici quelques ressources intéressantes :</p>
+        <p><a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie">Wikipédia</a>, <a href="https://conwaylife.com/wiki/">LifeWiki</a>, <a href="https://www.youtube.com/watch?v=C2vgICfQawE">"epic conway's game of life" (Rational Animations)</a>
+        , <a href="https://youtu.be/S-W0NX97DB0?si=D3INFdFrrCfTsUJc">"Le Jeu de la Vie" (ScienceEtonnante)</a>.</p>
+    </div>
+    <canvas id="gameCanvasf"></canvas>
+    <canvas id="gameCanvase"></canvas>
+    <canvas id="gameCanvas"></canvas>
+    <canvas id="gameCanvasd" class="hide"></canvas>
+    <div id="hotbar" class="hide">
+        <div id="gen">
+            <p>Génération</p>
+            <p id="gennum">0</p>
+        </div>
+        <button id="exit"><img src="./images/exit.svg" height="25" width="25"/></button>
+        <button id="random"><img src="./images/dice.png" height="25" width="25"/></button>
+        <button id="clear"><img src="./images/clear.svg" height="25" width="25"/></button>
+        <button id="debut"><img src="./images/debut.svg" height="25" width="25"/></button>
+        <button id="draw"><img src="./images/draw.svg" height="25" width="25"/></button>
+        <button id="erase"><img src="./images/erase.svg" height="25" width="25"/></button>
+        <button id="mvt"><img src="./images/mvt.svg" height="25" width="25"/></button>
+        <button id="play"><img src="./images/play.svg" height="25" width="25"/></button>
+        <button id="nxt"><img src="./images/nxt.svg" height="25" width="25"/></button>
+        <button id="speed"><img src="./images/speed.svg" height="25" width="25"/></button>
+        <button id="infinite"><img src="./images/symetrique.svg" height="25" width="25"/></button>
+        <button id="size"><img src="./images/size.svg" height="25" width="25"/></button>
+        <div id="speedmenu"  class="hide">
+            <div id="cache"></div>
+            <input type="range" id="speedrange" min="6" max="48000" value="1200">
+            <p id="genspeed">20 générations par seconde</p>
+        </div>
+        <div id="drawmenu" class="hide">
+            <button id="drawcell"><img src="./images/draw.svg" height="25" width="25"/></button>
+            <button id="drawsquare"><img src="./images/square.svg" height="25" width="25"/></button>
+            <button id="slider" class="txtb">Glider<br>Ship</button>
+            <button id="lwss" class="txtb">LWSS<br>Ship</button>
+            <button id="hwss" class="txtb">HWSS<br>Ship</button>
+            <button id="x66" class="txtb">X66<br>Ship</button>
+            <button id="fireship" class="txtb">Fireship<br>Ship</button>
+            <button id="crotchet" class="txtb">Crotchet<br>Ship</button>
+            <button id="ecologist" class="txtb">Ecologist<br>Ship</button>
+            <button id="sirrobin" class="txtb">Sir Robin<br>Ship</button>
+            <button id="p52" class="txtb">P52 Glider<br>Gun</button>
+        </div>
+        <div id="rotasymmenu" class="hide">
+            <button id="rota"><img src="./images/rota.svg" height="25" width="25"/></button>
+            <button id="sym"><img src="./images/sym.svg" height="25" width="25"/></button>
+            <br>
+            <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie" class="link">Wiki</a>
+            <a href="https://github.com/Ginosprod" class="link">Github</a>
+        </div>
+        <div id="erasemenu" class="hide">
+            <button id="erasecell"><img src="./images/erase.svg" height="25" width="25"/></button>
+            <button id="erasesquare"><img src="./images/square.svg" height="25" width="25"/></button>
+        </div>
+        <div id="infinitemenu" class="hide">
+            <div id="cache1"></div>
+            <button id="onwall"><img src="./images/wall.svg" height="25" width="25"/></button>
+            <input type="range" id="infiniterange" min="0" max="40" value="0">
+            <p id="sizeinfinite">0 symétrie</p>
+        </div>
+        <div id="sizemenu" class="hide">
+            <div id="cache2"></div>
+            <input type="range" id="sizerangeX" min="2" max="1000" value="2">
+            <p id="numX">X</p>
+            <p id="sizenumX">2</p>
+            <p id="blank"></p>
+            <input type="range" id="sizerangeY" min="2" max="1000" value="2">
+            <p id="numY">Y</p>
+            <p id="sizenumY">2</p>
+            
+        </div>
+    </div>
+</body>
+</html>
