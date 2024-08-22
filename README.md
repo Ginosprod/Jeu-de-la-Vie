@@ -13,5 +13,9 @@ Ce projet est une reproduction imparfaite du Jeu de la Vie original (grille fini
 
 # En savoir plus
 Si vous souhaitez en savoir plus sur le Jeu de la Vie, voici quelques ressources intéressantes :
-[Wikipédia]("https://fr.wikipedia.org/wiki/Jeu_de_la_vie") , [LifeWiki]("https://conwaylife.com/wiki/"), ["epic conway's game of life" (Rational Animations)]("https://www.youtube.com/watch?v=C2vgICfQawE"), ["Le Jeu de la Vie" (ScienceEtonnante)]("https://youtu.be/S-W0NX97DB0?si=D3INFdFrrCfTsUJc").
+- [Wikipédia](https://fr.wikipedia.org/wiki/Jeu_de_la_vie)
+- [LifeWiki](https://conwaylife.com/wiki/)
+- ["epic conway's game of life" (Rational Animations)](https://www.youtube.com/watch?v=C2vgICfQawE)
+- ["Le Jeu de la Vie" (ScienceEtonnante)](https://youtu.be/S-W0NX97DB0?si=D3INFdFrrCfTsUJc)
+
 
