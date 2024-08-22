@@ -1,3 +1,5 @@
+## [CREER](https://ginosprod.github.io/Jeu-de-la-Vie/)
+
 # Le Jeu de la Vie
 Le jeu de la vie est un automate cellulaire imaginé par John Horton Conway en 1970. Il s'agit d'un jeu à zéro joueur, ce qui signifie que son évolution est déterminée par son état initial et ne nécessite aucune intervention de la part d'un humain. On interagit avec le jeu en créant un motif initial, puis en observant son évolution.
 
