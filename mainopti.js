@@ -11,6 +11,31 @@ const canvasd = document.getElementById("gameCanvasd");
 canvasd.width = innerWidth;
 canvasd.height = innerHeight;
 
+if (window.innerWidth <= 768) {
+    var warningMessage = document.createElement('div');
+    warningMessage.id = 'mobile-warning';
+    warningMessage.innerHTML = '🚨 Ce site n\'est pas optimisé pour les mobiles. Pour une meilleure expérience, utilisez un ordinateur.';
+    warningMessage.style.position = 'fixed';
+    warningMessage.style.top = '50%';
+    warningMessage.style.left = '50%';
+    warningMessage.style.transform = 'translate(-50%, -50%)';
+    warningMessage.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    warningMessage.style.color = 'white';
+    warningMessage.style.padding = '20px';
+    warningMessage.style.borderRadius = '10px';
+    warningMessage.style.textAlign = 'center';
+    warningMessage.style.fontSize = '18px';
+    warningMessage.style.width = '80%';
+    warningMessage.style.maxWidth = '300px';
+    warningMessage.style.zIndex = '10';
+    document.body.appendChild(warningMessage);
+}
+setTimeout(function() {
+    var warning = document.getElementById('mobile-warning');
+    if (warning) {
+        warning.style.display = 'none';
+    }
+}, 5000); 
 
 //FORMS
 const formstitle = ["drawcell","drawsquare","slider","lwss","hwss","x66","fireship","crotchet","ecologist","sirrobin","p52"];
