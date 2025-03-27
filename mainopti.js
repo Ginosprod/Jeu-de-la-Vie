@@ -14,7 +14,7 @@ canvasd.height = innerHeight;
 if (window.innerWidth <= 768) {
     var warningMessage = document.createElement('div');
     warningMessage.id = 'mobile-warning';
-    warningMessage.innerHTML = '🚨 Ce site n\'est pas optimisé pour les mobiles. Pour une meilleure expérience, utilisez un ordinateur.';
+    warningMessage.innerHTML = '🚨 Ce site n\'est pas optimisé pour les mobiles. Pour une meilleure expérience, utilisez un ordinateur.\nCe message disparaitra au bout de 10 secondes.';
     warningMessage.style.position = 'fixed';
     warningMessage.style.top = '50%';
     warningMessage.style.left = '50%';
@@ -35,7 +35,7 @@ setTimeout(function() {
     if (warning) {
         warning.style.display = 'none';
     }
-}, 5000); 
+}, 10000); 
 
 //FORMS
 const formstitle = ["drawcell","drawsquare","slider","lwss","hwss","x66","fireship","crotchet","ecologist","sirrobin","p52"];
