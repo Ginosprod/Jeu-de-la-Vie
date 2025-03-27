@@ -7,7 +7,7 @@ body {
 
 @media (max-width: 768px) {
   #hotbar {
-    height: 128px;
+    height: 128px !important;
   }
 }
 
